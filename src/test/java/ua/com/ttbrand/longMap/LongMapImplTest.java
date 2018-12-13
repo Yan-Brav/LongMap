@@ -6,15 +6,6 @@ import org.junit.jupiter.api.Test;
 public class LongMapImplTest extends Assert {
     public LongMap<String> longMap = new LongMapImpl<>(15);
 
-//    @Rule
-//    public final Timeout timeout = new Timeout(10, TimeUnit.SECONDS);
-
-
-
-   /* @After
-    public void clearTestInfo(){
-        longMap.clear();
-    }*/
 
     @Test
     public void testSize(){
