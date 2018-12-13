@@ -10,20 +10,6 @@ public class LongMapImpl<V> implements LongMap<V>{
     private static final float DEFAULT_LOAD_FACTOR = 0.75f;
     private static final int TREEIFY_THRESHOLD = DEFAULT_INITIAL_CAPACITY * (int)DEFAULT_LOAD_FACTOR;
 
-    private static final long[] TABLE;
-
-    static {
-        TABLE = new long[256];
-        long h = 0x544B2FBACAAF1684L;
-        for (int i = 0; i < 256; i++) {
-            for (int j = 0; j < 31; j++) {
-                h = (h >>> 7) ^ h;
-                h = (h << 11) ^ h;
-                h = (h >>> 10) ^ h;
-            }
-            TABLE[i] = h;
-        }
-    }
     private int maxValue;
     private int[] table;
     private int[] nextPs;
